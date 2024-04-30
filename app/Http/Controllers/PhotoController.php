@@ -21,15 +21,22 @@ class PhotoController extends Controller
      */
     public function create()
     {
-        //
+        return view('Photo.create');
     }
 
     /**
      * Store a newly created resource in storage.
      */
     public function store(Request $request)
+
     {
-        //
+        dd($request->all());
+        $photo = new PhotoController($request->all());
+
+        $photo->create();
+
+        return redirect()->back()->with('success', 'Produto criado com sucesso');
+
     }
 
     /**
@@ -37,7 +44,8 @@ class PhotoController extends Controller
      */
     public function show(Photo $photo)
     {
-        //
+        // $request = new Photo($photo->all());
+        // $request ->save();
     }
 
     /**

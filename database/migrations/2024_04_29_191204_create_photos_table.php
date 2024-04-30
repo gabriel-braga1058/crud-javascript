@@ -13,6 +13,12 @@ return new class extends Migration
     {
         Schema::create('photos', function (Blueprint $table) {
             $table->id();
+            $table->nome();
+            $table->idade();
+            $table->sexo();
+            $table->sangue();
+            $table->nacionalidade();
+            $table->imagem();
             $table->timestamps();
         });
     }

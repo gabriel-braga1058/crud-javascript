@@ -7,7 +7,7 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::resource('Braga', PhotoController::class)
+Route::resource('photo', PhotoController::class)
 
     ->only(['index',  'create', 'store', 'show', 'edit', 'update', 'destroy']);
 
